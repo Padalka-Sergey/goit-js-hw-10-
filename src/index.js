@@ -19,7 +19,7 @@ function onInputCountry(evt) {
   if (evt.target.value.length >= 1) {
     fetchCountries(evt.target.value.trim()).then(onMarkup).catch(onError);
   }
-  return;
+  // return;
 }
 
 function onMarkup(dataCountry) {
@@ -29,7 +29,7 @@ function onMarkup(dataCountry) {
       item => `
             <li class="country-list-item">
             <div class="img-container">
-            <img id="img"class ="img"src="${item.flags.svg}" alt="${item.name.official}" />
+            <img id="img" class="img" src="${item.flags.svg}" alt="${item.name.official}" />
             </div>
             <p id="text">${item.name.official}</p>
         </li> `
@@ -57,7 +57,7 @@ function onMarkup(dataCountry) {
       item => `
             <li class="country-list-item">
             <div class="img-container-big">
-            <img id="img"class ="img-big"src="${item.flags.svg}" alt="${item.name.official}" />
+            <img id="img" class="img-big" src="${item.flags.svg}" alt="${item.name.official}" />
             </div>
             <p id="text"class ="text">${item.name.official}</p>
         </li> `

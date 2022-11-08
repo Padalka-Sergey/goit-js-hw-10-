@@ -13,7 +13,7 @@ const countryInfo = getEl('.country-info');
 input.addEventListener('input', debounce(onInputCountry, DEBOUNCE_DELAY));
 
 function onInputCountry(evt) {
-  console.log('Input');
+  // console.log('Input');
   countryList.innerHTML = '';
   countryInfo.innerHTML = '';
   if (evt.target.value.length >= 1) {
